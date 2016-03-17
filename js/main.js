@@ -1,5 +1,12 @@
-var i;
+var $ul = $('ul')
 
-for (i = 0; i < 10; i++) {
-  document.write(letter + '<br>');
+grains.forEach( {
+  var $li = $('<li>');
+  var $img = $('<img>');
+  var $h2 = $('<h2>');
+  var $p = $('<p>');
+
+  $li.append($img, $h2, $p)
+
+  $ul.append($li)
 }
