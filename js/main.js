@@ -1,12 +1,16 @@
-var $ul = $('ul')
+var $ul = $('ul');
 
-grains.forEach( {
+grains.forEach(function (item) {
   var $li = $('<li>');
   var $img = $('<img>');
-  var $h2 = $('<h2>');
   var $p = $('<p>');
+  var $h2 = $('<h2>');
 
-  $li.append($img, $h2, $p)
-
-  $ul.append($li)
-}
+  $ul.append($li);
+  $img.attr('src', 'images/' + item.img);
+  $li.append($img);
+  $h3.html(item.name);
+  $li.append($h2);
+  $p.html(item.desc);
+  $li.append($p);
+});
